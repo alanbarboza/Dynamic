@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         html += "<p>Huic mori optimum esse propter desperationem sapientiae, illi propter spem vivere. Et quod est munus, quod opus sapientiae? Si longus, levis dictata sunt. Facit enim ille duo seiuncta ultima bonorum, quae ut essent vera, coniungi debuerunt; <i>Ecce aliud simile dissimile.</i> Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit? Oculorum, inquit Plato, est in nobis sensus acerrimus, quibus sapientiam non cernimus.</p>"
         
         self.webView.loadHTMLString(html, baseURL: nil)
+        self.webView.scrollView.isScrollEnabled = false
+        // self.webView.setScrollEnabled(enabled: false)
 
     }
 
