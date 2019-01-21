@@ -30,6 +30,9 @@
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bb-ye-Oj4">
                                         <rect key="frame" x="8" y="236" width="359" height="236"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="236" id="hAZ-BT-how"/>
+                                        </constraints>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                             <wkPreferences key="preferences" minimumFontSize="20"/>
@@ -50,13 +53,12 @@
                                     <constraint firstItem="3Bb-ye-Oj4" firstAttribute="top" secondItem="Io3-Q3-gFq" secondAttribute="bottom" constant="8" id="3Zg-L2-r7Y"/>
                                     <constraint firstItem="VXZ-WJ-SE2" firstAttribute="centerX" secondItem="3Bb-ye-Oj4" secondAttribute="centerX" id="9rd-Fk-spe"/>
                                     <constraint firstAttribute="trailing" secondItem="3Bb-ye-Oj4" secondAttribute="trailing" constant="8" id="Q0A-e3-ZDO"/>
-                                    <constraint firstItem="VXZ-WJ-SE2" firstAttribute="top" secondItem="3Zl-Sm-9dX" secondAttribute="top" constant="480" id="Qcq-YJ-TQd"/>
                                     <constraint firstItem="Io3-Q3-gFq" firstAttribute="centerX" secondItem="3Zl-Sm-9dX" secondAttribute="centerX" id="Qhi-UH-z18"/>
                                     <constraint firstItem="Io3-Q3-gFq" firstAttribute="leading" secondItem="3Zl-Sm-9dX" secondAttribute="leading" id="ZdL-jz-0eZ"/>
                                     <constraint firstItem="Io3-Q3-gFq" firstAttribute="top" secondItem="3Zl-Sm-9dX" secondAttribute="top" constant="28" id="fwb-3A-e5r"/>
                                     <constraint firstItem="3Bb-ye-Oj4" firstAttribute="leading" secondItem="3Zl-Sm-9dX" secondAttribute="leading" constant="8" id="hEc-rV-zLq"/>
                                     <constraint firstAttribute="trailing" secondItem="Io3-Q3-gFq" secondAttribute="trailing" id="i9q-9J-QZu"/>
-                                    <constraint firstAttribute="bottom" secondItem="Io3-Q3-gFq" secondAttribute="bottom" constant="419" id="vmS-4d-aSs"/>
+                                    <constraint firstAttribute="bottom" secondItem="VXZ-WJ-SE2" secondAttribute="bottom" constant="8" id="oCt-kE-Vws"/>
                                     <constraint firstItem="VXZ-WJ-SE2" firstAttribute="top" secondItem="3Bb-ye-Oj4" secondAttribute="bottom" constant="8" id="zgR-ZE-3br"/>
                                 </constraints>
                             </scrollView>
@@ -72,6 +74,7 @@
                     </view>
                     <connections>
                         <outlet property="webView" destination="3Bb-ye-Oj4" id="4ws-CP-lOr"/>
+                        <outlet property="webViewHeight" destination="hAZ-BT-how" id="E5e-L9-ahG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

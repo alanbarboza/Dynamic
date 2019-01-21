@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     
+    @IBOutlet weak var webViewHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,10 +28,16 @@ class ViewController: UIViewController {
         
         self.webView.loadHTMLString(html, baseURL: nil)
         self.webView.scrollView.isScrollEnabled = false
-        // self.webView.setScrollEnabled(enabled: false)
+        self.webView.navigationDelegate = self
 
     }
 
-
 }
 
+extension ViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.webViewHeight.constant = webView.scrollView.contentSize.height
+        }
+    }
+}
